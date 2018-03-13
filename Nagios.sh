@@ -228,6 +228,16 @@ be recognised
 EOF
 sleep 5 
 sudo systemctl status nagios
+
+cat << EOF
+##############################################################
+To Acess the Nagios web interface you will need to go 
+$(hostname -I)/nagios (best to use IPV4 addr then 
+add an A record in the DNS Server, remeber to update the serial ;)
+##############################################################
+EOF
+sleep 6
+
 }
 
 overall_install () {
