@@ -234,6 +234,8 @@ cat << EOF
 To Acess the Nagios web interface you will need to go 
 $(hostname -I)/nagios (best to use IPV4 addr then 
 add an A record in the DNS Server, remeber to update the serial ;)
+U: nagiosadmin
+P: whatever you set as the password
 ##############################################################
 EOF
 sleep 6
