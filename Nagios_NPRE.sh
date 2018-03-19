@@ -7,6 +7,7 @@
 
 NAGIOS_PLUGIN_VER="2.2.1"
 NPRE_VERSION="3.2.1"
+IP_ADDR_OF_NAGIOS_SERVER="10.0.0.35"
 
 add_user () {
     sudo useradd nagios 
@@ -39,7 +40,6 @@ NPRE_install () {
 }
 
 host_ip_address_adding () {
-IP_ADDR_OF_NAGIOS_SERVER="10.0.0.35"
 ALLOWED_HOSTS="allowed_hosts=127.0.0.1,::1,"$IP_ADDR_OF_NAGIOS_SERVER""
 sudo sed -i '106d' /usr/local/nagios/etc/nrpe.cfg
 sudo sed -i '106i '$ALLOWED_HOSTS'' /usr/local/nagios/etc/nrpe.cfg
